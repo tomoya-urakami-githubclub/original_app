@@ -1,0 +1,83 @@
+@charset "utf-8";
+
+/*全体*/
+.wrapper{
+    max-width: 1600px;
+    margin: 0 auto;
+    color: rgb(255, 255, 255);
+    background-color: #15151e;
+    margin-bottom: 50px;
+}
+#header {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 98%;
+    margin: 1rem 0 0;
+    background-color: #15151e;
+}
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+table {
+    border: 3px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color: rgb(255, 255, 255);
+}
+th, td {
+    border: 2px solid #ddd;
+    width: 14.2%;
+    padding-top: 10px;
+    padding-bottom: 90px;
+    text-align: center;
+}
+/*日曜日*/
+td:first-child {
+    color: rgb(255, 30, 0);
+}
+/*土曜日*/
+td:last-child {
+    color: rgb(0, 153, 255);
+}
+/*前後月の日付*/
+td.disabled {
+    color: #15151e;
+}
+/*本日*/
+td.today {
+    background-color: #D65E72;
+    color: #fff;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #ffffff;
+    border-color: #000000;
+    box-shadow: 0 0 300px 0 rgb(255, 255, 255);
+}
+#prev {
+    float: left;
+}
+#next {
+    float: right;
+}

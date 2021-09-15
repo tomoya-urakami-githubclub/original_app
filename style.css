@@ -1,0 +1,89 @@
+/* Google Fonts 読み込み */
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+body {
+  margin: 0;
+  background-color: #15151e;
+}
+
+/* 全体を囲うコンテナー */
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: #15151e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 時計の共通スタイル */
+.clock {
+  font-family: 'Share Tech Mono', monospace;
+  color: #daf6ff;
+  text-shadow: 0 0 70px #0aafe6;
+  line-height: 1.2;
+  position: relative;
+  text-align: center;
+}
+
+.clock.recording {
+  color: red;
+}
+
+/* 日付のスタイル */
+.clock-date {
+  font-size: 55px;
+}
+
+/* 時間のスタイル */
+.clock-time {
+  font-size: 150px;
+
+  display: flex;
+}
+
+/* 文字サイズ調整 */
+@media screen and (max-width: 500px) {
+  .clock-date {
+    font-size: 5vw;
+  }
+  .clock-time {
+    font-size: 20vw;
+  }
+}
+  /* ボタンの波紋 */
+  .clock-time::before, clock-time::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    border: 2px solid #0aafe6;
+    border-radius: 50%;
+    box-sizing: border-box;
+    pointer-events: none;
+    animation: pulsate 1s linear infinite;
+  }
+  
+.clock-time::after {
+    animation-delay: 0.5s;
+  }
+  
+  /* ボタンの波紋が広がっていくアニメーション */
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }

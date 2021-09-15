@@ -1,0 +1,20 @@
+/* ボタン本体 */
+.btn {
+    width: 200px;
+    height: 60px;
+    border-radius: 100px;
+    text-shadow: 0 0 10px #000000;
+    color: rgb(255, 255, 255);
+    font-family: "Signika";
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  
+  /* ボタンホバー時 */
+.btn:hover {
+    background-color: #fff;
+    color: #000000;
+    box-shadow: 0 0 300px 0 rgba(165, 233, 253, 0.514);
+  }
